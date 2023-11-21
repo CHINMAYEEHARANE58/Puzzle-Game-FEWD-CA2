@@ -1,0 +1,46 @@
+*{
+    font-family: 'Istok Web', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: white;
+}
+
+body{
+    background-image: url("./Images/Screen\ 20.png");  
+}
+
+#puzzle{
+    border: 1px solid red;
+    width: 60rem;
+    height: 38rem;
+    margin: 3rem 30rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#puzzle img{
+    width: 14rem;
+    height: 10rem;
+    border: 1px solid black;
+
+}
+
+.timer{
+    border: 1px solid red;
+    width: 21rem;
+    height: 4rem;
+    border-radius: 35px;
+    margin: 3rem 50rem 0rem;
+    background-color: rgba(241, 72, 122, 1);
+}
+
+h2{
+    padding-top: 40px;
+    font-size: 40px;
+}
+
+h3{ 
+    font-size: 40px;
+    padding-top: 10px;
+}
