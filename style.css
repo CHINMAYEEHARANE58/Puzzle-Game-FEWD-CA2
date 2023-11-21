@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap');
 
-
-
 *{
     font-family: 'Istok Web', sans-serif;
     margin: 0px;
@@ -11,10 +9,12 @@
     color: white;
     overflow: hidden;
 }
+
 body{
     margin: 0px;
 }
 
+/* main page */
 #gamepage{
     height: 100vh;
     width: 100vw;
@@ -24,11 +24,9 @@ body{
 #bg-img{
     height: 100vh;
     width: 100vw;
-    z-index: -1;
 }
 
 #logo{
-    z-index: 1;
     height: 13rem;
     width: 55rem;
     position: absolute;
@@ -141,3 +139,228 @@ li{
     margin-top: 0.9rem;
 }
 
+/* result */
+
+#playAgain{
+    border: 0px;
+    position: absolute;
+    height: 4rem;
+    width: 20rem;
+    left: 50rem;
+    bottom: 4rem;
+    border-radius: 50px;
+    background-color: rgba(241, 72, 122, 1);
+    font-size: 45px;
+    font-weight: bold;
+}
+
+#pictures-container{
+    position: absolute;
+    width: 80rem;
+    height: 40rem;
+    left: 20rem;
+    bottom: 9rem;
+    font-size: 40px;
+    border-radius: 16px;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem;
+
+}
+
+.pictures{
+    width: 20rem;
+    height: 14rem;
+    font-size: 40px;
+    border-radius: 16px;
+    color: black;
+}
+
+.pictures img{
+    width: 20rem;
+    height: 14rem;
+}
+
+h2{
+    position: absolute;
+    font-size: 40px;
+    left: 34rem;
+    bottom: 50rem;
+}
+
+
+/* responsive */
+@media screen and  (max-width: 264px)
+{
+    #bg-img{
+        background-image: url("./Images/mobile\ screen\ -\ 4.png");
+    }
+
+    #logo{
+        height: 70px;
+        width: 15rem;
+        left: 7rem;
+        bottom: 1rem;
+        border: 1px solid rgb(181, 33, 33);
+    }
+    
+    #logo img{
+        height: 70px;
+        width: 15rem;
+    }
+    
+    #name{
+        border: 0px;
+        position: absolute;
+        width: 30rem;
+        height: 5rem;
+        left: 44rem;
+        bottom: 23rem;
+        font-size: 40px;
+        border-radius: 16px;
+        color: black;
+    
+    }
+    
+    #nickname{
+        border: 0px;
+        position: absolute;
+        width: 18rem;
+        height: 3rem;
+        left: 50.7rem;
+        bottom: 18rem;
+        font-size: 20px;
+        color: black;
+        border-radius: 16px;
+    }
+    
+    #play-button{
+        border: 0px;
+        position: absolute;
+        height: 4rem;
+        width: 20rem;
+        left: 50rem;
+        bottom: 10rem;
+        border-radius: 50px;
+        background-color: rgba(241, 72, 122, 1);
+        font-size: 45px;
+        font-weight: bold;
+    }
+    
+    ::placeholder{
+        color: rgba(175, 172, 172, 1);
+    }
+    
+    /* Instructions */
+    
+    #instructions{
+        position: absolute;
+        background-color: aliceblue;
+        left: 30rem;
+        bottom: 17rem;
+        height: 30rem;
+        width: 60rem;
+        border-radius: 16px;
+        padding: 3rem;
+    
+    }
+    
+    #start-button{
+        border: 0px;
+        position: absolute;
+        width: 21rem;
+        height: 4rem;
+        border-radius: 35px;
+        left: 50rem;
+        bottom: 10rem;
+        background-color: rgba(241, 72, 122, 1);
+        font-size: 45px;
+        font-weight: bold;
+    }
+    
+    h3{
+        color: black;
+        font-size: 35px;
+        font-weight: 9rem;
+        padding: 1.5rem 0rem 2rem;
+    }
+    
+    li{
+        color: black;
+        font-size: 25px;
+        text-align: left;
+        gap: 1rem;
+    }
+    
+    .back{
+        border: 1px solid red;
+        position: absolute;
+        height: 4rem;
+        width: 4rem;
+        left: 3rem;
+        bottom: 49rem;
+        border-radius: 50px;
+        background-color: rgba(241, 72, 122, 1);
+        font-size: 45px;
+    }
+    
+    .back img{
+        margin-top: 0.9rem;
+    }
+    
+    /* result */
+    
+    #playAgain{
+        border: 0px;
+        position: absolute;
+        height: 4rem;
+        width: 20rem;
+        left: 50rem;
+        bottom: 4rem;
+        border-radius: 50px;
+        background-color: rgba(241, 72, 122, 1);
+        font-size: 45px;
+        font-weight: bold;
+    }
+    
+    #pictures-container{
+        position: absolute;
+        width: 80rem;
+        height: 40rem;
+        left: 20rem;
+        bottom: 9rem;
+        font-size: 40px;
+        border-radius: 16px;
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 2rem;
+    
+    }
+    
+    .pictures{
+        width: 20rem;
+        height: 14rem;
+        font-size: 40px;
+        border-radius: 16px;
+        color: black;
+    }
+    
+    .pictures img{
+        width: 20rem;
+        height: 14rem;
+    }
+    
+    h2{
+        position: absolute;
+        font-size: 40px;
+        left: 34rem;
+        bottom: 50rem;
+    }
+    
+    
+
+}

@@ -29,7 +29,7 @@ body{
 }
 
 .timer{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 21rem;
     height: 4rem;
     border-radius: 35px;
@@ -82,7 +82,8 @@ h3{
 
 
 .back{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    border: 0px;
     position: absolute;
     height: 4rem;
     width: 4rem;
@@ -100,7 +101,8 @@ h3{
 /*  */
 
 .buttons{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    border: 0px;
     display: flex;
     justify-content: space-evenly;
     width: 80rem;
@@ -109,7 +111,8 @@ h3{
 }
 
 #restart-button, .score, #next-button{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    border: 0px;
     width: 21rem;
     height: 4rem;
     border-radius: 35px;
@@ -128,3 +131,9 @@ h3{
     width: 50rem;
     height: 32rem;
 }
+
+/* responsive */
+@media screen and  (max-width: 600px)
+{
+    
+}    
