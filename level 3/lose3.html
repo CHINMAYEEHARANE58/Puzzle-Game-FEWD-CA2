@@ -13,16 +13,36 @@
             <img src="../Images/arrow-back-regular-24.png">
         </button>
     </a>
-    <h4>Close call! Try again!</h4> 
-    <div class="complete-puzzle">
-        <img src=" ">
-        <!-- <div class="layer"><h2>Level 1 Completed!!</h2></div> -->
+    <h4>Great effort! Better luck <br> next time!</h4> 
+    <div class="incomplete-puzzle">
+        <!-- <img src="./img 1.png "> -->
     </div>
 
-    <div class="buttons">
-    <a href="./game3.html"> <button id="restart-button">Restart</button></a> 
-    </div>
-
+    <a href="./game1.html"> <button id="lose-restart-button">Restart</button></a> 
     
+
+    <script src="../game.js"></script>
+    <script>
+        var orgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];  // orginal order 
+        var imgOrder = ["5", "8", "15", "9", "1", "16", "14", "6", "12", "11", "2", "3", "4", "10", "7", "13"];  //I didn't randomize as it can create unsolvable puzzles
+
+
+        window.onload = function(){
+            for(let i=0; i<rows; i++){
+                for(let j=0; j<columns; j++){
+
+                    //created an img tag with id for example id="0-0"
+
+                    let block = document.createElement("img");
+                    block.id = j.toString() + "-" + i.toString();
+                    block.src = imgOrder.shift() + ".png";
+                    block.classList.add('blockImg');
+                    block.style.width = '8.5rem';
+                    block.style.height = '6rem';
+                    document.querySelector(".incomplete-puzzle").append(block);
+                }
+            }
+        }
+    </script>
 </body>
 </html>

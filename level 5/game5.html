@@ -7,10 +7,43 @@
     <link rel="stylesheet" href="../level.css">
 </head>
 <body>
+    <a href="../index.html"> 
+        <button class="back">
+            <img src="../Images/arrow-back-regular-24.png">
+        </button>
+    </a>
+
+    <img id="refrenceImg" src="./img 5.png">
+
     <!-- level 5 game page -->
     <h2>Level 5</h2> 
     <div id="puzzle"></div>
-    <div class="timer"><h3>Time: 5:00</h3></div>
+    <div id="timer"><h3>Time: 5:00</h3></div>
     
+    <script src="../game.js"></script>
+
+    <script> 
+    const startingMin = 20;
+    let time = startingMin*60;
+
+    const timerEl = document.getElementById('timer');
+
+    setInterval(startTimer, 1000);
+
+    function startTimer(){
+        const minutes = Math.floor(time/60);
+        let seconds = time%60;
+
+        timerEl.innerHTML = `Time - ${minutes}: ${seconds}`;
+        time--;
+
+        if(JSON.stringify(imgOrder) === JSON.stringify(orgOrder)){
+            location.href= "../level 5/win5.html";
+        }
+        else if (time < 0) {
+            location.href= "../level 5/lose5.html";
+        }
+    }
+    </script>
 </body>
 </html>

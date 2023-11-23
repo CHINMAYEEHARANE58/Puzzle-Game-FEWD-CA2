@@ -16,15 +16,39 @@
             <img src="Images/Pink and Blue Minimalist Toy Shop - Logo.png">
         </div>
     
-        <!-- Name of user -->
-        <input id="name" type="text" required placeholder="Enter your name...">
+        <form onsubmit= "playerInfo(); return false;">
+            <!-- Name of user -->
+            <input id="name" type="text" required placeholder="Enter your name...">
 
-        <!-- Nickname of user -->
-        <input id="nickname" type="text" required placeholder="Enter your nickname...">
+            <!-- Nickname of user -->
+            <input id="nickname" type="text" required placeholder="Enter your nickname...">
+        </form>
 
        <a href="./instructions.html"> <button id="play-button">PLAY</button></a>        
     </div>
-    
-    
+
+
+    <script src="./app.js"></script>
+    <script>
+        // Function to save user information to local storage
+        function playerInfo() {
+            var name = document.getElementById('name').value;
+            var nickname = document.getElementById('nickname').value;
+
+            // Create an object to store user information
+            var playerDetail = {
+                name: name,
+                nickname: nickname
+            };
+
+            // Convert the object to a JSON string and store in local storage
+            localStorage.setItem('playerDetail', JSON.stringify(playerDetail));
+
+            // Redirect to the next page
+            window.location.href = './instructions.html';
+        }
+    </script>
+
 </body>
 </html>
+<img src="./level 1/level 1 assets/1.png" alt="">

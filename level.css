@@ -5,6 +5,7 @@
     margin: 0px;
     padding: 0px;
     text-align: center;
+    overflow: hidden;
     color: white;
 }
 
@@ -13,12 +14,14 @@ body{
 }
 
 #puzzle{
-    border: 1px solid red;
-    width: 60rem;
-    height: 38rem;
-    margin: 3rem 30rem;
-    /* display: flex;
-    flex-wrap: wrap; */
+    /* box-shadow: 2rem 2rem black; */
+    box-shadow: 0 0 1 #ecd574 ;
+    /* border: 1px solid red ; */
+    width: 36rem;
+    height: 24rem;
+    margin: 2rem 22rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #puzzle img{
@@ -26,81 +29,53 @@ body{
     height: 10rem;
 }
 
-.timer{
+#timer{
     /* border: 1px solid red; */
-    width: 21rem;
-    height: 4rem;
+    height: 3rem;
+    width: 13rem;
     border-radius: 35px;
-    margin: 3rem 50rem 0rem;
+    margin: 1rem 34rem 0rem;
     background-color: rgba(241, 72, 122, 1);
-}
+    font-size: 30px;
+    padding-top: 7px;
+} 
+    
 
 h2{
-    padding-top: 40px;
-    font-size: 40px;
+    padding-top: 1.5rem;
+    font-size: 2rem;
 }
 
 h3{ 
-    font-size: 40px;
-    padding-top: 7px;
+    font-size: 30px;
+    padding-top: 3px;
 }
 
 h4{
     position: absolute;
-    font-size: 40px;
-    left: 34rem;
-    bottom: 50rem;
+    font-size: 27px;
+    right: 27rem;
+    top: 2rem;
 }
-
-/* win page */
-.complete-puzzle{
-    /* border: 1px solid red;
-    position: relative; */
-    width: 50rem;
-    height: 32rem;
-    margin: 3rem 35rem;
-    /* transition: 0.5s ease;
-    overflow: hidden;
-    display: flex; */
-}
-
-/* .complete-puzzle:hover{
-    transform: translateY(0);
-}
-
-.layer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient();
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 4rem;
-    transform: translateY(100%);
-    transition: 0.5s ease;
-} */
-
-
 
 .back{
-    /* border: 1px solid red; */
-    border: 0px;
+    border: 0;
     position: absolute;
-    height: 4rem;
-    width: 4rem;
-    left: 3rem;
-    bottom: 49rem;
+    height: 3rem;
+    width: 3rem;
+    left: 1.5rem;
+    bottom: 33rem;
     border-radius: 50px;
     background-color: rgba(241, 72, 122, 1);
-    font-size: 45px;
+    transition: 0.5s ease;
 }
 
 .back img{
-    margin-top: 0.9rem;
+    margin-top: 0.4rem;
+}
+
+.back:hover{
+    background-color: #5698d0;
 }
 
 /*  */
@@ -113,10 +88,12 @@ h4{
     width: 80rem;
     height: 4rem;
     margin-left: 20rem;
+    position: absolute;
+    bottom: 3rem;
+
 }
 
-#restart-button, .score, #next-button{
-    /* border: 1px solid red; */
+#restart-button{
     border: 0px;
     width: 21rem;
     height: 4rem;
@@ -124,17 +101,74 @@ h4{
     background-color: rgba(241, 72, 122, 1);
     font-size: 45px;
     font-weight: bold;
-
+    transition: 0.5s ease;
 }
 
-#next-button{
-    font-size: 45px;
-    font-weight: bold;
+#restart-button:hover{
+    background-color: #5698d0;
+}
+
+.complete-puzzle{
+    /* border: 2px solid  #5698d0; */
+    position: relative;
+    width: 50rem;
+    height: 32rem;
+    margin: 13rem 35rem;
+
 }
 
 .complete-puzzle img{
     width: 50rem;
     height: 32rem;
+}
+
+#refrenceImg{
+    width: 10rem;
+    height: 7rem;
+    position: absolute;
+    left: 68rem;
+    top: 2rem;
+}
+
+/* .incomplete-puzzle{
+    border: 1px solid red;
+    position: relative;
+    width: 34.5rem;
+    height: 22.5rem;
+    margin: 8rem 25rem;
+}
+
+.incomplete-puzzle img{
+    width: 34.5rem;
+    height: 22.5rem;
+} */
+
+.incomplete-puzzle{
+    /* box-shadow: 2rem 2rem black; */
+    box-shadow: 0 0 1 #ecd574 ;
+    border: 1px solid red ;
+    width: 34rem;
+    height: 24rem;
+    margin: 6rem 24rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.incomplete-puzzle img{
+    width: 34.5rem;
+    height: 22.5rem;
+}
+
+#lose-restart-button{
+    border: 0;
+    width: 11rem;
+    height: 3rem;
+    position: absolute;
+    border-radius: 35px;
+    background-color: rgba(241, 72, 122, 1);
+    font-size: 27px;
+    bottom: 2rem;
+    left: 36rem;
 }
 
 /* responsive */
@@ -146,6 +180,7 @@ h4{
         background-size: cover;
         height: 100vh;
         width: 100vw;
+        background-repeat: no-repeat;
     }
 
     #puzzle{
@@ -167,8 +202,9 @@ h4{
     }
 
     h2{
-        padding-top: 30px;
+        margin-top: 2rem;
         font-size: 25px;
+
     }
 
     h3{ 
@@ -177,10 +213,9 @@ h4{
     }
 
     h4{
-        position: absolute;
-        font-size: 40px;
-        left: 34rem;
-        bottom: 50rem;
+        font-size: 17px;
+        left: 2.1rem;
+        bottom: 24rem;
     }
     
     /* win page */
@@ -188,7 +223,7 @@ h4{
         border: 1px solid red;
         width: 14rem;
         height: 10rem;
-        margin: 45px 20px;
+        margin: 140px 20px;
     }
 
     .back{
@@ -196,43 +231,38 @@ h4{
         width: 30px;
         left: 0.7rem;
         bottom: 29.1rem;
+        font-size: 2px;
+
     }
     
     .back img{
-        margin-top: 0.3rem;
-        width: 20px;
+        margin-top: 1px;
         height: 20px;
+        width: 20px;
+
     }
 
     /*  */
 
     .buttons{
-        /* border: 1px solid red; */
-        border: 0px;
-        display: flex;
-        justify-content: space-evenly;
-        width: 80rem;
-        height: 4rem;
-        margin-left: 20rem;
+        border: 1px solid red;
+        width: 9rem;
+        height: 2.5rem;
+        margin-left: 3.7rem;
+        bottom: 5rem;
     }
-
-    #restart-button, .score, #next-button{
+    
+    #restart-button{
         /* border: 1px solid red; */
         border: 0px;
-        width: 21rem;
-        height: 4rem;
+        width: 9rem;
+        height: 2.5rem;
         border-radius: 35px;
         background-color: rgba(241, 72, 122, 1);
-        font-size: 45px;
-        font-weight: bold;
-
-    }
-
-    #next-button{
-        font-size: 45px;
+        font-size: 25px;
         font-weight: bold;
     }
-
+    
     .complete-puzzle img{
         width: 50rem;
         height: 32rem;
