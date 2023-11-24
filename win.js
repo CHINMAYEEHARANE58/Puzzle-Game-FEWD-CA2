@@ -3,6 +3,18 @@
 
 // // Display the score on the page
 //  console.log(score);
+var storedScore = localStorage.getItem('score');
+
+if (storedScore) {
+    // Parse the score as an integer
+    var score = parseInt(storedScore);
+
+    // Display the score on the page
+    document.querySelector(".score").textContent = "Score: " + score;
+} else {
+    document.querySelector(".score").textContent = "No score found.";
+}
+
 
  function winPhrases() {
     const winTexts = [
@@ -23,7 +35,3 @@
 // Call the winPhrases function when the win page is loaded
 winPhrases();
 
-function updateScoreOnPage(score) {
-    // Assuming you have an element with id "score-display" to show the score
-    document.getElementById("score").textContent = "Score: " + score;
-}

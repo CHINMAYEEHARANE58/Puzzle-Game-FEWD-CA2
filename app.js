@@ -1,5 +1,5 @@
 // Iteration 1.3: Add background sound
-let sound = new Audio("../mixkit-kidding-around-9 (mp3cut.net).mp3");
+let sound = new Audio("./mixkit-kidding-around-9 (mp3cut.net).mp3");
 sound.play();
 sound.loop = true;
 sound.volume = 0.2;

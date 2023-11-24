@@ -12,6 +12,8 @@ var imgOrder = ["5", "8", "15", "9", "1", "16", "14", "6", "12", "11", "2", "3",
 
 
 window.onload = function(){
+    startTime = new Date();  //start time when the page loads
+
     for(let i=0; i<rows; i++){
         for(let j=0; j<columns; j++){
 
@@ -60,36 +62,60 @@ function dragDrop(){
 
 function dragEnd(){
 
-    if(!sideBlock.src.includes("16.png")){
-        return;
-    }
+    // if(!sideBlock.src.includes("16.png")){
+    //     return;
+    // }
 
-    let presentCoords = presentBlock.id.split("-"); //to convert "0-0" to ["0", "0"]
-    let i = parseInt(presentCoords[0]);
-    let j = parseInt(presentCoords[1]);
+    // let presentCoords = presentBlock.id.split("-"); //to convert "0-0" to ["0", "0"]
+    // let i = parseInt(presentCoords[0]);
+    // let j = parseInt(presentCoords[1]);
 
-    let sideCoords = sideBlock.id.split("-");
-    let i2 = parseInt(sideCoords[0]);
-    let j2 = parseInt(sideCoords[1]);
+    // let sideCoords = sideBlock.id.split("-");
+    // let i2 = parseInt(sideCoords[0]);
+    // let j2 = parseInt(sideCoords[1]);
 
-    let moveLeft = i == i2 && j2 == j-1;
-    let moveRight = i == i2 && j2 == j+1;
+    // let moveLeft = i == i2 && j2 == j-1;
+    // let moveRight = i == i2 && j2 == j+1;
 
-    let moveUp = j == j2 && i2 == i-1;
-    let moveDown = j == j2 && i2 == i+1;
+    // let moveUp = j == j2 && i2 == i-1;
+    // let moveDown = j == j2 && i2 == i+1;
 
-    let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
+    // let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
 
-    if(isAdjacent){
+    // if(isAdjacent){
         let presentImg = presentBlock.src;
         let sideImg = sideBlock.src;
 
         presentBlock.src = sideImg;
         sideBlock.src = presentImg;
 
-    }
+        score+=1;
+
+        //calculating time diffrence in minutes
+        let endTime = new Date();
+        let timeDiff = (endTime -startTime) /60000;
+
+        
+        if (timeDiff <= 5) {
+            score += 100;
+        } else if (timeDiff <= 10) {
+            score += 80;
+        } else if (timeDiff <= 15) {
+            score += 60;
+        } else if (timeDiff <= 20) {
+            score += 40;
+        } else if (timeDiff <= 25) {
+            score += 20;
+        }
+
+        console.log("Score:", score);
+
+        localStorage.setItem('score',score);
+        
+    // }
 
 }
+
 
 let levelSound = new Audio("./level bg music.mp3");
 levelSound.play();

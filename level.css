@@ -29,19 +29,14 @@ body{
     height: 10rem;
 }
 
-.music{
+audio{
     border: 1px solid red;
     position: absolute;
-    height: 3rem;
-    border-radius: 50px;
-    width: 3rem;
     left: 1.4rem;
     top: 5rem;
+    display: none;
 }
 
-.music audio{
-    margin: 0px 0px 9px;
-}
 
 #timer{
     /* border: 1px solid red; */
