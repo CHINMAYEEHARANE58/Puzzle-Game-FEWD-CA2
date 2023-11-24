@@ -5,19 +5,27 @@ sound.loop = true;
 sound.volume = 0.2;
 
 // click sound
+
+// const clickSound = new Audio('./click sound.wav');
 let button = document.getElementById('play-button');
 
-let clickSound = new Audio('./sounds/click sound.wav')
-clickSound.volume = 0.8;
+// clickSound.volume = 0.8;
+var audio = document.getElementById("myAudio");
 
-button.onclick = () => {
-    clickSound.pause();
-    clickSound.currentTime = 0;
+button.addEventListener("click", function() {
+    // Play the audio when the button is clicked
     clickSound.play();
-}
+    clickSound.volume = 0.3
+});
 
-// const button = document.getElementById('play-button');
-// const sound = document.getElementById('clickSound');
+document.getElementById('userInfoForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevents the default form submission
+    console.log('Form submitted!');
+    playerInfo();
+});
+
+ //const button = document.getElementById('play-button');
+ //const sound = document.getElementById('clickSound');
 
 //     button.addEventListener('click', () => {
 //         if (sound.paused) {

@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../level.css">
 </head>
 <body>
+
+    <!-- level 1 game page -->
+
     <!-- Back button to return to the main page -->
     <a href="../index.html"> 
         <button class="back">
@@ -14,36 +17,32 @@
         </button>
     </a>
     
+    <!-- background sound -->
     <audio controls autoplay>
         <source src="../level bg music.mp3" type="audio/mp3">
     </audio>
    
-
+    <!-- Reference image for the puzzle -->
     <img id="refrenceImg" src="./img 1.png">
     
-    <!-- level 1 game page -->
     <h2>Level 1</h2> 
     <!-- puzzle 1 -->
     <div id="puzzle"></div>
     <div id="timer"><h3>Time: 5:00</h3></div>
 
-
-    <!-- <button id="song">
-        <img src="../Images/volume-mute-regular-24.png">
-    </button> -->
-
-
     <script src="../game.js"></script>
     <!-- <script src="../app.js"></script> -->
     <script> 
-    const startingMin = 20;
+    // starting timer
+    const startingMin = 30;
     let time = startingMin*60;
 
     const timerEl = document.getElementById('timer');
     const intervalId = setInterval(startTimer, 1000);
 
     setInterval(startTimer, 1000);
-
+    
+    // function to start the timer
     function startTimer(){
         const minutes = Math.floor(time/60);
         let seconds = time%60;
@@ -51,11 +50,8 @@
         timerEl.innerHTML = `Time - ${minutes}: ${seconds}`;
         time--;
 
-        
-        console.log("imgOrder:", imgOrder.toString());
-        console.log("orgOrder:", orgOrder.toString());
-
-        if(arraysEqual(imgOrder, orgOrder) && time > 0){
+        // checking the winning and losing conditions
+        if(arraysEqual(imgOrder, orgOrder)){
             clearInterval(intervalId);
             location.href= "./win1.html";
         }
@@ -63,19 +59,15 @@
             clearInterval(intervalId);
             location.href= "./lose1.html";
         }
-        console.log("Condition:", arraysEqual(imgOrder, orgOrder) && time > 0);
-        console.log("Initial imgOrder:", imgOrder.toString());
-        console.log("orgOrder:", orgOrder.toString());
     }
 
-    function arraysEqual(arr1, arr2) {
-        if (arr1.length !== arr2.length) return false;
-        for (let i = 0; i < arr1.length; i++) {
-            if (arr1[i] !== arr2[i]) return false;
+    function arraysEqual(imgOrder, orgOrder) {
+        if (imgOrder.length !== orgOrder.length) return false;
+        for (let i = 0; i < imgOrder.length; i++) {
+            if (imgOrder[i] !== orgOrder[i]) return false;
         }
         return true;
     }
     </script>
-    <!-- <img src="./lose1.html" alt=""> -->
 </body>
 </html>

@@ -8,31 +8,38 @@
 </head>
 <body>
     <!-- level 1 lose page -->
+
+
+    <!-- Back button to return to the main page -->
     <a href="../index.html"> 
         <button class="back">
             <img src="../Images/arrow-back-regular-24.png">
         </button>
     </a>
-    <h4>Great effort! Better luck <br> next time!</h4> 
-    <div class="incomplete-puzzle">
-        <!-- <img src="./img 1.png "> -->
-    </div>
 
+    <!-- lose page phrase -->
+    <h4>Great effort! Better luck <br> next time!</h4> 
+    <div class="incomplete-puzzle"></div>
+
+    <!-- Restart button to play the level again -->
     <a href="./game1.html"> <button id="lose-restart-button">Restart</button></a> 
     
 
     <script src="../game.js"></script>
     <script>
+
+        // orginal order of picture and incomplete order of picture
         var orgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];  // orginal order 
-var imgOrder = ["5", "8", "15", "9", "1", "16", "14", "6", "12", "11", "2", "3", "4", "10", "7", "13"];  //I didn't randomize as it can create unsolvable puzzles
+        var imgOrder = ["5", "8", "15", "9", "1", "16", "14", "6", "12", "11", "2", "3", "4", "10", "7", "13"];  //I didn't randomize as it can create unsolvable puzzles
 
 
 window.onload = function(){
+    // Loop through rows and columns
     for(let i=0; i<rows; i++){
         for(let j=0; j<columns; j++){
 
+            // Creating an img tag with a unique id
             //created an img tag with id for example id="0-0"
-
             let block = document.createElement("img");
             block.id = j.toString() + "-" + i.toString();
             block.src = imgOrder.shift() + ".png";

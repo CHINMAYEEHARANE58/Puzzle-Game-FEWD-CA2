@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +16,8 @@
         <div id="logo">
             <img src="Images/Pink and Blue Minimalist Toy Shop - Logo.png">
         </div>
-    
-        <form onsubmit= "playerInfo(); return false;">
+
+        <form id="userInfoForm">
             <!-- Name of user -->
             <input id="name" type="text" required placeholder="Enter your name...">
 
@@ -24,13 +25,23 @@
             <input id="nickname" type="text" required placeholder="Enter your nickname...">
         </form>
 
-       <a href="./instructions.html"> <button id="play-button">PLAY</button></a>        
-    </div>
+        <a href="./instructions.html">
+            <button id="play-button">PLAY</button>
+            <audio id="myAudio">
+                <source src="./click sound.wav" type="audio/wav">             
+            </audio>
+        </a>
 
+    </div>
 
     <script src="./app.js"></script>
     <script>
         // Function to save user information to local storage
+        document.getElementById('userInfoForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevents the default form submission
+            playerInfo();
+        });
+
         function playerInfo() {
             var name = document.getElementById('name').value;
             var nickname = document.getElementById('nickname').value;
@@ -40,7 +51,7 @@
                 name: name,
                 nickname: nickname
             };
-
+            console.log('playerDetail')
             // Convert the object to a JSON string and store in local storage
             localStorage.setItem('playerDetail', JSON.stringify(playerDetail));
 
@@ -48,7 +59,7 @@
             window.location.href = './instructions.html';
         }
     </script>
-
+<!-- <img src="./click sound.wav" alt=""> -->
 </body>
+
 </html>
-<!-- <audio src="./mixkit-kidding-around-9 (mp3cut.net).mp3" alt=""> -->
