@@ -1,3 +1,4 @@
+
 var rows = 4;
 var columns = 4;
 
@@ -5,12 +6,6 @@ var presentBlock; //the block we are going to move
 var sideBlock; // empty block
 
 var score = 0;
-
-if (localStorage.getItem('turns')) {
-    turns = parseInt(localStorage.getItem('turns'));
-} else {
-    score = 0;
-}
 
 var orgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];  // orginal order 
 var imgOrder = ["5", "8", "15", "9", "1", "16", "14", "6", "12", "11", "2", "3", "4", "10", "7", "13"];  //I didn't randomize as it can create unsolvable puzzles
@@ -65,7 +60,7 @@ function dragDrop(){
 
 function dragEnd(){
 
-    if(!sideBlock.src.includes("4.png")){
+    if(!sideBlock.src.includes("16.png")){
         return;
     }
 
@@ -92,37 +87,39 @@ function dragEnd(){
         presentBlock.src = sideImg;
         sideBlock.src = presentImg;
 
-        turns+=1;
-        localStorage.setItem('turns', turns);
-        console.log(turns)
     }
 
-    score+=1;
 }
 
-// Iteration 1.3: Add background sound
-// var levelSound = new Audio("./sounds/level sound.mp3");
+let levelSound = new Audio("./level bg music.mp3");
+levelSound.play();
+levelSound.loop = true;
+levelSound.volume = 0.2;
+
+// let sound = new Audio("https://www.jiosaavn.com/song/chill-gaming-music/ODsSYyBEZ1w");
+// sound.play();
+// sound.loop = true;
+// sound.volume = 0.2;
+
+// let levelSound = new Audio("https://www.jiosaavn.com/song/chill-gaming-music/ODsSYyBEZ1w");
+
+// // Play audio in response to a user action, e.g., a button click
+// document.getElementById('song').addEventListener('click', function () {
+//     levelSound.play();
+//     levelSound.volume = 0.3;
+// });
+
+
+
+// let levelSound = new Audio("./sounds/level bg music.mp3");
 // levelSound.volume = 0.3;
-// levelSound.play();
+
+// levelSound.addEventListener('loadeddata', function() {
+//     levelSound.play();
+// });
+
 // levelSound.loop = true;
 
-var levelSound = new Audio("./sounds/level sound.mp3");
-levelSound.volume = 0.3;
-
-levelSound.addEventListener('loadeddata', function() {
-    levelSound.play();
-});
-
-levelSound.loop = true;
-
-// let time = document.getElementById("timer").textContent;
-
-// var timer = setInterval(()=>{
-//     time--;
-//     document.getElementById("timer").textContent = time;
-    
-
-// },1000)
 
 // // drag sound
 // let dragSound = new Audio("./sounds/drag sound.mp3");
@@ -153,6 +150,7 @@ levelSound.loop = true;
 //     console.error("Element with ID 'puzzle' not found.");
 // }
 
+// randomized lose phrases
 function losePhrases() {
     const loseTexts = [
         "Great effort! Better luck next time!",
@@ -171,3 +169,15 @@ function losePhrases() {
 }
 // Call the losePhrases function when the win page is loaded
 losePhrases();
+
+
+// let blockSound = document.getElementById('puzzle');
+
+// let dragSound = new Audio('./drag sound.wav')
+// dragSound.volume = 0.8;
+
+// button.onclick = () => {
+//     dragSound.pause();
+//     dragSound.currentTime = 0;
+//     dragSound.play();
+// }

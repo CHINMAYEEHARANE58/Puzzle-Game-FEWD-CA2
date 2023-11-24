@@ -13,6 +13,11 @@
             <img src="../Images/arrow-back-regular-24.png">
         </button>
     </a>
+    <div class="music">
+        <audio controls>
+            <source src="../level bg music.mp3" type="audio/mp3">
+        </audio>
+    </div>
 
     <img id="refrenceImg" src="./img 1.png">
     
@@ -21,9 +26,15 @@
     <!-- puzzle 1 -->
     <div id="puzzle"></div>
     <div id="timer"><h3>Time: 5:00</h3></div>
-    
-    <script src="../game.js"></script>
 
+
+    <!-- <button id="song">
+        <img src="../Images/volume-mute-regular-24.png">
+    </button> -->
+
+
+    <script src="../game.js"></script>
+    <!-- <script src="../app.js"></script> -->
     <script> 
     const startingMin = 20;
     let time = startingMin*60;
@@ -47,5 +58,6 @@
         }
     }
     </script>
+    <!-- <img src="../" alt=""> -->
 </body>
 </html>

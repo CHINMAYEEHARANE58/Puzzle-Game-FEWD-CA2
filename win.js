@@ -22,3 +22,8 @@
 }
 // Call the winPhrases function when the win page is loaded
 winPhrases();
+
+function updateScoreOnPage(score) {
+    // Assuming you have an element with id "score-display" to show the score
+    document.getElementById("score").textContent = "Score: " + score;
+}
