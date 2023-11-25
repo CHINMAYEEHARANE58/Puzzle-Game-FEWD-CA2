@@ -26,28 +26,27 @@ body{
 }
 
 #logo{
-    height: 7rem;
-    width: 24rem;
+    height: 10vw;
+    width: 28vw;
     position: absolute;
-    transform: translate(-50%, -50%);
-    left: 37.5rem;
-    bottom: 18rem;
+    left: 33vw;
+    bottom: 26vw;
     /* border: 1px solid red ; */
 }
 
 #logo img{
-    height: 7rem;
-    width: 24rem;
+    height: 10vw;
+    width: 28vw;
 }
 
 #name{
     border: 0px;
     position: absolute;
-    width: 17rem;
-    height: 2.5rem;
-    left: 32rem;
-    bottom: 18rem;
-    font-size: 25px;
+    width: 19vw;
+    height: 3vw;
+    left: 40vw;
+    bottom: 22.5vw;
+    font-size: 22px;
     border-radius: 16px;
     color: black;
 
@@ -56,10 +55,10 @@ body{
 #nickname{
     border: 0px;
     position: absolute;
-    width: 15rem;
-    height: 2rem;
-    left: 33rem;
-    bottom: 14.5rem;
+    width: 17vw;
+    height: 2.5vw;
+    left: 41vw;
+    bottom: 17vw;
     font-size: 17px;
     color: black;
     border-radius: 16px;
@@ -68,10 +67,10 @@ body{
 #play-button{
     border: 0px;
     position: absolute;
-    height: 3rem;
-    width: 13rem;
-    left: 34rem;
-    bottom: 8rem;
+    height: 4vw;
+    width: 14vw;
+    left: 42.5vw;
+    bottom: 10vw;
     border-radius: 50px;
     background-color: rgba(241, 72, 122, 1);
     font-size: 30px;
