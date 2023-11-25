@@ -68,12 +68,25 @@ h2{
     border-radius: 35px;
     background-color: rgba(241, 72, 122, 1);
     font-size: 25px;
+    transition: 0.5s ease;
+
 }
 
+#restart-button:hover {
+    background-color: #5698d0;
+}
+
+#next-button:hover{
+    background-color: #5698d0;  
+}
 .score{
     font-size: 23px;
     padding-top: 5px;
     height: 3.1vw;
+}
+
+.score:hover{
+    background-color: #5698d0;
 }
 
 .complete-puzzle img{
@@ -95,8 +108,8 @@ h2{
 
     h2{
         font-size: 27px;
-        width: 60vw;
-        margin: 30vw 20vw 0vw;
+        width: 79vw;
+        margin: 30vw 11vw 0vw;
     }
     
     /* win page */
@@ -118,6 +131,8 @@ h2{
         left: 3vw;
         bottom: 200vw;
     }
+
+    
     
     .back img{
         margin-top: 1.5vw;
@@ -143,17 +158,19 @@ h2{
         height: 10vw;
         font-size: 7vw;
         font-weight: bold;
+        transform: scale(1.1);
+        transition: 0.5s ease;
     }
     
     .score{
         padding-top: 2px;
         height: 9vw;
     }
-
+    
     #next-button{
         font-size: 7vw;
     }
-    
+
     a{
         display: flex;
         text-decoration: none;
