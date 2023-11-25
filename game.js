@@ -1,4 +1,6 @@
 // no. of rows and columns
+
+
 var rows = 4;
 var columns = 4;
 
@@ -12,6 +14,8 @@ var turns = 0;
 let orgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];  // orginal order 
 let imgOrder = ["5", "8", "15", "9", "1", "16", "14", "6", "12", "11", "2", "3", "4", "10", "7", "13"];  //I didn't randomize as it can create unsolvable puzzles
 
+let a = 0
+
 let startTime;
 window.onload = function(){
     startTime = new Date();  //start time when the page loads
@@ -22,13 +26,9 @@ window.onload = function(){
             //created an img tag with id for example id="0-0"
 
             let block = document.createElement("img");
-            block.id = j.toString() + "-" + i.toString();
-            // block.src = imgOrder.shift() + ".png";
-            block.src = parseInt(imgOrder[j]) + ".png";
-
+            block.id = imgOrder[a].toString();
+            block.src = parseInt(imgOrder[a]) + ".png";
             block.classList.add('blockImg');
-            block.style.width = '9rem';
-            block.style.height = '6rem';
 
 
             //drag function
@@ -40,6 +40,7 @@ window.onload = function(){
             block.addEventListener("dragend", dragEnd); //after drag drop to swap the two blocks
 
             document.getElementById("puzzle").append(block);
+            a++
         }
     }
 
@@ -89,44 +90,64 @@ window.onload = function(){
     
         // if(isAdjacent){
             let presentImg = presentBlock.src;
+            let presentorder = imgOrder.indexOf(presentBlock.id)
+            
             let sideImg = sideBlock.src;
+            let sideorder = imgOrder.indexOf(sideBlock.id)
     
             presentBlock.src = sideImg;
             sideBlock.src = presentImg;
-    
+
+            let temp = imgOrder[presentorder]
+            imgOrder[presentorder] = imgOrder[sideorder]
+            imgOrder[sideorder] = temp
+
+            presentBlock.id = imgOrder[presentorder]
+            sideBlock.id = imgOrder[sideorder]
+
             turns+=1;
             console.log(turns)
             localStorage.setItem('turns', turns);
     
             console.log(imgOrder,"img",orgOrder,"org");
-    
-    
-            //calculating time diffrence in minutes
-            // let endTime = new Date();
-            // let timeDiff = (endTime -startTime) /60000;
-    
-            // // score condition
-            // if (timeDiff <= 5) {
-            //     score += 100;
-            // } else if (timeDiff <= 10) {
-            //     score += 80;
-            // } else if (timeDiff <= 15) {
-            //     score += 60;
-            // } else if (timeDiff <= 20) {
-            //     score += 40;
-            // } else if (timeDiff <= 25) {
-            //     score += 20;
-            
-    
-            // console.log("Score:", score);
-    
-            // 
-            
-    
-            
+              
         // }
     
     }
+
+    // starting timer
+    const startingMin = 30;
+    let time = startingMin*60;
+
+    
+    startTimer();
+    const timerEl = document.getElementById('timer');
+    
+    const intervalId = setInterval(startTimer, 1000);
+
+    
+    
+    // function to start the timer
+    function startTimer(){
+        const minutes = Math.floor(time/60);
+        let seconds = time%60;
+
+        timerEl.innerHTML = `Time - ${minutes}: ${seconds}`;
+        time--;
+
+            for (let i = 0; i < imgOrder.length; i++) {
+                console.log(imgOrder[i],"img",orgOrder[i],"org")
+                if (imgOrder[i] === orgOrder[i]) {
+                    location.href= "./win1.html";
+                }
+                else if(time < 0){
+                    location.href= "./lose1.html";
+                }
+            };
+
+    }
+
+
 }
 
 

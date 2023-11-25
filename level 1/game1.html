@@ -46,19 +46,23 @@
     function startTimer(){
         const minutes = Math.floor(time/60);
         let seconds = time%60;
-
+        let v = 0
         timerEl.innerHTML = `Time - ${minutes}: ${seconds}`;
         time--;
 
-            for (let i = 0; i < imgOrder.length; i++) {
-                console.log(imgOrder[i],"img",orgOrder[i],"org")
+        for (let i = 0; i < imgOrder.length; i++) {
+                // console.log(imgOrder[i],"img",orgOrder[i],"org")
                 if (imgOrder[i] === orgOrder[i]) {
-                    location.href= "./win1.html";
+                    v++
                 }
                 else if(time < 0){
                     location.href= "./lose1.html";
                 }
             };
+        if (v === orgOrder.length){
+            console.log("win")
+            location.href= "./win1.html";
+        }    
 
     }
 
