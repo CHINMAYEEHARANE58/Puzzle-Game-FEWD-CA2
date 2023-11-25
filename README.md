@@ -122,6 +122,19 @@ Functionality:
 Display a summary of completed puzzles.
 Offer the option to replay or return to the main page.
 
+Refrence:
+For basic idea how to make it :
+https://youtu.be/BORmIIrMmnE?si=l8AiwdOTy2j9-JlM
+https://youtu.be/NXRIrP1k4dE?si=x7hU-PuCXNvJvCha
+https://youtu.be/sD3Os4H_EOU?si=C4mpuURwnLsYfuZf
+https://www.w3schools.com/
 
+
+Pictures:
+https://youtu.be/yWd4mzGqQYo?si=4Ih7RDQzE2repL5z
+
+Backgroung sound:
+https://www.chosic.com/free-music/all/
+https://mixkit.co/free-sound-effects/click/
 
 
