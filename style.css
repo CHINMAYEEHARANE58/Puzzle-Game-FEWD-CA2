@@ -92,24 +92,21 @@ body{
 #instructions{
     position: absolute;
     background-color: aliceblue;
-    left: 24rem;
-    bottom: 10rem;
-    height: 23rem;
-    width: 32rem;
+    left: 31vw;
+    bottom: 11vw;
+    height: 29vw;
+    width: 37vw;
     border-radius: 16px;
-    padding: 2rem;
-    border: 1px solid red ;
-
-
+    padding: 2vw;
 }
 
 #start-button{
     border: 0px;
     position: absolute;
-    height: 3rem;
-    width: 13rem;
-    left: 34rem;
-    bottom: 4rem;
+    height: 4vw;
+    width: 14vw;
+    left: 42.5vw;
+    bottom: 4vw;
     border-radius: 35px;
     background-color: rgba(241, 72, 122, 1);
     font-size: 30px;
@@ -125,21 +122,19 @@ body{
 #displayInfo{
     color: #5698d0;
     font-size: 19px;
-    font-weight: 9rem;
 }
 
 h3{
     color: black;
-    font-size: 19px;
-    font-weight: 10rem;
-    padding: 1rem 0rem ;
+    font-size: 18px;
+    padding: 1vw 0vw ;
 }
 
 p{
     color: rgb(51, 49, 49);
-    font-size: 17px;
-    gap: 2rem;
-    padding-left: 1.1rem;
+    font-size: 16px;
+    gap: 3vw;
+    padding-left: 1vw;
 }
 
 h1{
@@ -149,17 +144,17 @@ h1{
 .back{
     border: 0;
     position: absolute;
-    height: 3rem;
-    width: 3rem;
-    left: 1.5rem;
-    bottom: 33rem;
+    height: 3.5vw;
+    width: 3.5vw;
+    left: 1.5vw;
+    bottom: 41vw;
     border-radius: 50px;
     background-color: rgba(241, 72, 122, 1);
     transition: 0.5s ease;
 }
 
 .back img{
-    margin-top: 0.4rem;
+    margin-top: 0.4vw;
     transform: scale(1.1);
 }
 

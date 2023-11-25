@@ -23,7 +23,9 @@ window.onload = function(){
 
             let block = document.createElement("img");
             block.id = j.toString() + "-" + i.toString();
-            block.src = imgOrder.shift() + ".png";
+            // block.src = imgOrder.shift() + ".png";
+            block.src = parseInt(imgOrder[j]) + ".png";
+
             block.classList.add('blockImg');
             block.style.width = '9rem';
             block.style.height = '6rem';
