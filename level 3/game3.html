@@ -23,27 +23,30 @@
     <script src="../game.js"></script>
 
     <script> 
-    const startingMin = 20;
-    let time = startingMin*60;
+        const startingMin = 20;
+        let time = startingMin*60;
 
-    const timerEl = document.getElementById('timer');
+        const timerEl = document.getElementById('timer');
 
-    setInterval(startTimer, 1000);
+        setInterval(startTimer, 1000);
 
-    function startTimer(){
-        const minutes = Math.floor(time/60);
-        let seconds = time%60;
+        function startTimer(){
+            const minutes = Math.floor(time/60);
+            let seconds = time%60;
 
-        timerEl.innerHTML = `Time - ${minutes}: ${seconds}`;
-        time--;
+            timerEl.innerHTML = `Time - ${minutes}: ${seconds}`;
+            time--;
 
-        if(JSON.stringify(imgOrder) === JSON.stringify(orgOrder)){
-            location.href= "../level 3/win3.html";
+            for (let i = 0; i < imgOrder.length; i++) {
+                    console.log(imgOrder[i],"img",orgOrder[i],"org")
+                    if (imgOrder[i] === orgOrder[i]) {
+                        location.href= "./win3.html";
+                    }
+                    else if(time < 0){
+                        location.href= "./lose3.html";
+                    }
+                };
         }
-        else if (time < 0) {
-            location.href= "../level 3/lose3.html";
-        }
-    }
     </script>
 
 </body>

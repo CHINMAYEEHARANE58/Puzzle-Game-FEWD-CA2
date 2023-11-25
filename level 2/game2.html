@@ -23,7 +23,7 @@
     <script src="../game.js"></script>
 
     <script> 
-        const startingMin = 20;
+        const startingMin = 25;
         let time = startingMin*60;
 
         const timerEl = document.getElementById('timer');
@@ -37,12 +37,21 @@
             timerEl.innerHTML = `Time - ${minutes}: ${seconds}`;
             time--;
 
-            if(JSON.stringify(imgOrder) === JSON.stringify(orgOrder)){
-                location.href= "../level 2/win2.html";
-            }
-            else if (time < 0) {
-                location.href= "../level 2/lose2.html";
-            }
+            // if(JSON.stringify(imgOrder) === JSON.stringify(orgOrder)){
+            //     location.href= "../level 2/win2.html";
+            // }
+            // else if (time < 0) {
+            //     location.href= "../level 2/lose2.html";
+            // }
+            for (let i = 0; i < imgOrder.length; i++) {
+                console.log(imgOrder[i],"img",orgOrder[i],"org")
+                if (imgOrder[i] === orgOrder[i]) {
+                    location.href= "./win2.html";
+                }
+                else if(time < 0){
+                    location.href= "./lose2.html";
+                }
+            };
         }
     </script>
     

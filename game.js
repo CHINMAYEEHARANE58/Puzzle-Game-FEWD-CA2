@@ -115,38 +115,6 @@ window.onload = function(){
     
     }
 
-    // starting timer
-    const startingMin = 30;
-    let time = startingMin*60;
-
-    
-    startTimer();
-    const timerEl = document.getElementById('timer');
-    
-    const intervalId = setInterval(startTimer, 1000);
-
-    
-    
-    // function to start the timer
-    function startTimer(){
-        const minutes = Math.floor(time/60);
-        let seconds = time%60;
-
-        timerEl.innerHTML = `Time - ${minutes}: ${seconds}`;
-        time--;
-
-            for (let i = 0; i < imgOrder.length; i++) {
-                console.log(imgOrder[i],"img",orgOrder[i],"org")
-                if (imgOrder[i] === orgOrder[i]) {
-                    location.href= "./win1.html";
-                }
-                else if(time < 0){
-                    location.href= "./lose1.html";
-                }
-            };
-
-    }
-
 
 }
 
