@@ -19,7 +19,10 @@
 
     <!-- lose page phrase -->
     <h4 id="losePhrase">Great effort! Better luck <br> next time!</h4> 
-    <div class="incomplete-puzzle"></div>
+    <div class="incomplete-puzzle">
+        <img src="./img 1.png">
+    </div>
+
 
     <!-- Restart button to play the level again -->
     <a href="./game1.html"> <button id="lose-restart-button">Restart</button></a> 
@@ -33,7 +36,7 @@
         var imgOrder = ["5", "8", "15", "9", "1", "16", "14", "6", "12", "11", "2", "3", "4", "10", "7", "13"];  //I didn't randomize as it can create unsolvable puzzles
 
 
-window.onload = function(){
+    window.onload = function(){
     // Loop through rows and columns
     for(let i=0; i<rows; i++){
         for(let j=0; j<columns; j++){

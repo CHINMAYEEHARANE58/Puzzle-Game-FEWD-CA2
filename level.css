@@ -55,8 +55,8 @@ h3{
 h4{
     position: absolute;
     font-size: 27px;
-    right: 27rem;
-    top: 2rem;
+    right: 34vw;
+    top: 2vw;
 }
 
 .back{
@@ -79,51 +79,7 @@ h4{
 .back:hover{
     background-color: #5698d0;
 }
-
-/*  */
-
-.buttons{
-    border: 1px solid red;
-    border: 0px;
-    display: flex;
-    justify-content: space-evenly;
-    width: 80vw;
-    height: 4vw;
-    margin-left: 20vw;
-    position: absolute;
-    bottom: 3vw;
-
-}
-
-#restart-button{
-    border: 0px;
-    width: 21vw;
-    height: 4vw;
-    border-radius: 35px;
-    background-color: rgba(241, 72, 122, 1);
-    font-size: 45px;
-    font-weight: bold;
-    transition: 0.5s ease;
-}
-
-#restart-button:hover{
-    background-color: #5698d0;
-}
-
-.complete-puzzle{
-    /* border: 2px solid  #5698d0; */
-    position: relative;
-    width: 50rem;
-    height: 32rem;
-    margin: 13rem 35rem;
-
-}
-
-.complete-puzzle img{
-    width: 50rem;
-    height: 32rem;
-}
-
+  
 #refrenceImg{
     width: 12vw;
     height: 8vw;
@@ -132,46 +88,39 @@ h4{
     top: 2vw;
 }
 
-/* .incomplete-puzzle{
-    border: 1px solid red;
-    position: relative;
-    width: 34.5rem;
-    height: 22.5rem;
-    margin: 8rem 25rem;
-}
-
-.incomplete-puzzle img{
-    width: 34.5rem;
-    height: 22.5rem;
-} */
-
 .incomplete-puzzle{
-    /* box-shadow: 2rem 2rem black; */
-    box-shadow: 0 0 1 #ecd574 ;
-    border: 1px solid red ;
-    width: 34rem;
-    height: 24rem;
-    margin: 6rem 24rem;
+    width: 45vw;
+    height: 30vw;
+    position: absolute;
+    left: 27vw;
+    top: 8vw;
     display: flex;
     flex-wrap: wrap;
 }
 
 .incomplete-puzzle img{
-    width: 34.5rem;
-    height: 22.5rem;
+    width: 45vw;
+    height: 30vw;
 }
 
 #lose-restart-button{
-    border: 0;
-    width: 11rem;
-    height: 3rem;
     position: absolute;
+    bottom: 2vw;
+    left: 43vw;
+    border: 0px;
+    width: 15vw;
+    height: 4vw;
     border-radius: 35px;
     background-color: rgba(241, 72, 122, 1);
-    font-size: 27px;
-    bottom: 2rem;
-    left: 36rem;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.5s ease;
 }
+
+#lose-restart-button:hover{
+    background-color: #5698d0;
+}
+
 
 /* responsive */
 @media only screen and  (max-width: 900px)
@@ -182,6 +131,7 @@ h4{
         background-size: cover;
         height: 100vh;
         width: 100vw;
+        background-position: center;
         background-repeat: no-repeat;
     }
 
@@ -225,17 +175,9 @@ h4{
     }
 
     h4{
-        font-size: 17px;
-        left: 2.1rem;
-        bottom: 24rem;
-    }
-    
-    /* win page */
-    .complete-puzzle{
-        border: 1px solid red;
-        width: 14rem;
-        height: 10rem;
-        margin: 140px 20px;
+        font-size: 27px;
+        top: 30vw;
+        right: 1vw;
     }
 
     .back{
@@ -250,29 +192,25 @@ h4{
         width: 20px;
         height: 20px;
     }
-    /*  */
 
-    .buttons{
-        border: 1px solid red;
-        width: 9rem;
-        height: 2.5rem;
-        margin-left: 3.7rem;
-        bottom: 5rem;
+    .incomplete-puzzle{
+        width: 89vw;
+        height: 60vw;
+        position: absolute;
+        left: 5vw;
+        top: 60vw;
     }
     
-    #restart-button{
-        /* border: 1px solid red; */
-        border: 0px;
-        width: 9rem;
-        height: 2.5rem;
-        border-radius: 35px;
-        background-color: rgba(241, 72, 122, 1);
-        font-size: 25px;
-        font-weight: bold;
+    .incomplete-puzzle img{
+        width: 89vw;
+        height: 60vw;
     }
-    
-    .complete-puzzle img{
-        width: 50rem;
-        height: 32rem;
+
+    #lose-restart-button{
+        height: 15vw;
+        width: 45vw;
+        left: 29vw;
+        bottom: 60vw;
+        font-size: 34px;
     }
 } 
