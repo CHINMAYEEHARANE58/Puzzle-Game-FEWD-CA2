@@ -1,4 +1,4 @@
-Deployed link of the output: https://cool-mermaid-b37774.netlify.app/
+
 
 Welcome to Puzzle Game - The Ultimate Puzzle Challenge.
 
