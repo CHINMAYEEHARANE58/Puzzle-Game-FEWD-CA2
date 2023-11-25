@@ -4,61 +4,143 @@
     font-family: 'Istok Web', sans-serif;
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     text-align: center;
-    overflow: hidden;
     color: white;
+    overflow: hidden;
 }
 
 body{
-    background-image: url("./Images/Screen\ 20.png");  
+    margin: 0px;
 }
 
-#puzzle{
-    width: 54vw;
-    height: 34vw;
-    margin: 1vw 25vw;
-    display: flex;
-    flex-wrap: wrap;
+/* main page */
+#gamepage{
+    height: 100vh;
+    width: 100vw;
 }
 
-.blockImg{
-    width: 13vw;
-    height: 8.5vw;
+#bg-img{
+    height: 100vh;
+    width: 100vw;
 }
 
-audio{
-    display: none;
-}
-
-
-#timer{
-    height: 3vw;
-    width: 15vw;
-    border-radius: 35px;
-    margin: 1.5vw 43vw 0vw;
-    background-color: rgba(241, 72, 122, 1);
-    font-size: 25px;
-    padding-top: 7px;
-} 
-    
-
-h2{
-    padding-top: 1vw;
-    font-size: 30px;
-}
-
-h3{ 
-    font-size: 30px;
-    padding-top: 3px;
-}
-
-h4{
+#logo{
+    height: 10vw;
+    width: 28vw;
     position: absolute;
-    font-size: 27px;
-    right: 34vw;
-    top: 2vw;
+    left: 33vw;
+    bottom: 26vw;
+    /* border: 1px solid red ; */
 }
 
+#logo img{
+    height: 10vw;
+    width: 28vw;
+}
+
+#name{
+    border: 0px;
+    position: absolute;
+    width: 19vw;
+    height: 3vw;
+    left: 40vw;
+    bottom: 22.5vw;
+    font-size: 22px;
+    border-radius: 16px;
+    color: black;
+
+}
+
+#nickname{
+    border: 0px;
+    position: absolute;
+    width: 17vw;
+    height: 2.5vw;
+    left: 41vw;
+    bottom: 17vw;
+    font-size: 17px;
+    color: black;
+    border-radius: 16px;
+}
+
+#play-button{
+    border: 0px;
+    position: absolute;
+    height: 4vw;
+    width: 14vw;
+    left: 42.5vw;
+    bottom: 10vw;
+    border-radius: 50px;
+    background-color: rgba(241, 72, 122, 1);
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+#play-button:hover{
+    background-color: #5698d0;
+    transform: scale(1.1);
+}
+
+::placeholder{
+    color: rgba(175, 172, 172, 1);
+}
+
+/* Instructions */
+
+#instructions{
+    position: absolute;
+    background-color: aliceblue;
+    left: 31vw;
+    bottom: 11vw;
+    height: 29vw;
+    width: 37vw;
+    border-radius: 16px;
+    padding: 2vw;
+}
+
+#start-button{
+    border: 0px;
+    position: absolute;
+    height: 4vw;
+    width: 14vw;
+    left: 42.5vw;
+    bottom: 4vw;
+    border-radius: 35px;
+    background-color: rgba(241, 72, 122, 1);
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+#start-button:hover{
+    background-color: #5698d0;
+    transform: scale(1.1);
+}
+
+#displayInfo{
+    color: #5698d0;
+    font-size: 19px;
+}
+
+h3{
+    color: black;
+    font-size: 18px;
+    padding: 1vw 0vw ;
+}
+
+p{
+    color: rgb(51, 49, 49);
+    font-size: 16px;
+    gap: 3vw;
+    padding-left: 1vw;
+}
+
+h1{
+    color: #5698d0;
+    font-size: 25px;
+}
 .back{
     border: 0;
     position: absolute;
@@ -79,105 +161,149 @@ h4{
 .back:hover{
     background-color: #5698d0;
 }
-  
-#refrenceImg{
-    width: 12vw;
-    height: 8vw;
-    position: absolute;
-    left: 85vw;
-    top: 2vw;
-}
 
-.incomplete-puzzle{
-    width: 45vw;
-    height: 30vw;
-    position: absolute;
-    left: 27vw;
-    top: 8vw;
-    display: flex;
-    flex-wrap: wrap;
-}
+/* result */
 
-.incomplete-puzzle img{
-    width: 45vw;
-    height: 30vw;
-}
-
-#lose-restart-button{
-    position: absolute;
-    bottom: 2vw;
-    left: 43vw;
+#playAgain{
     border: 0px;
-    width: 15vw;
+    position: absolute;
     height: 4vw;
-    border-radius: 35px;
+    width: 17vw;
+    left: 41vw;
+    bottom: 2.5vw;
+    border-radius: 50px;
     background-color: rgba(241, 72, 122, 1);
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     transition: 0.5s ease;
 }
 
-#lose-restart-button:hover{
+#playAgain:hover{
     background-color: #5698d0;
+    transform: scale(1.1);
+}
+
+#pictures-container{
+    position: absolute;
+    width: 55vw;
+    height: 26vw;
+    left: 22vw;
+    bottom: 9vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1vw;
+}
+
+.pictures{
+    width: 16vw;
+    height: 11vw;
+    border-radius: 16px;
+}
+
+.pictures img{
+    width: 16vw;
+    height: 11vw;
+}
+
+h2{
+    position: absolute;
+    font-size: 30px;
+    left: 24vw;
+    bottom: 38vw;
 }
 
 
 /* responsive */
 @media only screen and  (max-width: 900px)
-{
-
-    body{
-        background-image: url("./Images/level\ bg\ img.png");  
-        background-size: cover;
+{   
+    #gamepage{
         height: 100vh;
-        width: 100vw;
+        width: 100vw;        
+        
+    }
+
+    #bg-img{
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
     }
 
-    #puzzle{
-        border: 1px solid red;
-        width: 89vw;
-        height: 60vw;
-        margin: 10vw 23px;
+ 
+    #logo{
+        height: 24vw;
+        width: 80vw;
+        left: 3vw;
+        bottom: 130vw;
+    }
+    
+    #logo img{
+        height: 24vw;
+        width: 80vw;
     }
 
-    #puzzle img{
-        width: 22.25vw;
+
+    #name{
+        width: 50vw;
+        height: 10vw;
+        left: 27vw;
+        bottom: 110vw;
+        font-size: 17px;
+        border-radius: 12px;
+    }
+    
+    #nickname{
+        width: 45vw;
+        height: 9vw;
+        left: 29.5vw;
+        bottom: 90vw;
+        font-size: 15px;
+        border-radius: 12px;
+    }
+    
+    #play-button{
         height: 15vw;
+        width: 45vw;
+        left: 29vw;
+        bottom: 60vw;
+        font-size: 34px;
+    }
+    
+    
+    /* Instructions */
+
+    #instructions{
+        left: 10vw;
+        bottom: 90vw;
+        height: 78vw;
+        width: 80vw;
+        border-radius: 14px;
+        padding: 11px;
     }
 
-    #timer{
-        height: 11vw;
-        width: 47vw;
-        margin: 20vw 27vw 0vw;
-        font-size: 26px;
-        padding-top: 4vw;
+    #start-button{
+        height: 15vw;
+        width: 45vw;
+        left: 27vw;
+        bottom: 60vw;
+        font-size: 37px;
     }
 
-    h2{
-        margin-top: 40vw;
-        font-size: 45px;
-
+    h1{
+        font-size: 21px;
     }
 
-    #refrenceImg{
-        width: 23vw;
-        height: 18vw;
-        position: absolute;
-        left: 71vw;
-        top: 6vw;
+    h3{
+        font-size: 17px;
+        padding: 3vw 0px;
     }
 
-    h3{ 
-        font-size: 25px;
-        padding-top: 3px;
-    }
-
-    h4{
-        font-size: 27px;
-        top: 30vw;
-        right: 1vw;
+    p{
+        font-size: 14px;
+        line-height: 5vw;
+        padding-left: 0.3vw;
     }
 
     .back{
@@ -193,24 +319,46 @@ h4{
         height: 20px;
     }
 
-    .incomplete-puzzle{
-        width: 89vw;
-        height: 60vw;
-        position: absolute;
-        left: 5vw;
-        top: 60vw;
-    }
-    
-    .incomplete-puzzle img{
-        width: 89vw;
-        height: 60vw;
-    }
+    /* result */
 
-    #lose-restart-button{
+    #playAgain{
         height: 15vw;
         width: 45vw;
-        left: 29vw;
+        left: 28vw;
         bottom: 60vw;
-        font-size: 34px;
+        font-size: 30px;
     }
-} 
+
+    #pictures-container{
+        left: 15vw;
+        bottom: 90vw;
+        height: 78vw;
+        width: 73vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1vw 0vw;
+    }
+
+    .pictures{
+        width: 30vw;
+        height: 22vw;
+        font-size: 40px;
+        border-radius: 6px;
+    }
+
+    .pictures img{
+        width: 30vw;
+        height: 22vw;
+    }
+
+    h2{
+        font-size: 23px;
+        left: 11vw;
+        right: 14vw;
+        bottom: 178vw;
+        width: 81vw
+    }
+
+
+}
