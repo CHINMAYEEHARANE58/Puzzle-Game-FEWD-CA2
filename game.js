@@ -1,6 +1,5 @@
 // no. of rows and columns
 
-
 var rows = 4;
 var columns = 4;
 
@@ -65,30 +64,9 @@ window.onload = function(){
     }
     
     function dragEnd(){
+
+            // after dragEnd the images will get swapped
     
-        // To make sure the block will only get dragged on block 16.png
-        // if(!sideBlock.src.includes("16.png")){
-        //     return;
-        // }
-    
-        // To make sure the block will only get dragged on the 16.png block if it is adjusent
-        // let presentCoords = presentBlock.id.split("-"); //to convert "0-0" to ["0", "0"]
-        // let i = parseInt(presentCoords[0]);
-        // let j = parseInt(presentCoords[1]);
-    
-        // let sideCoords = sideBlock.id.split("-");
-        // let i2 = parseInt(sideCoords[0]);
-        // let j2 = parseInt(sideCoords[1]);
-    
-        // let moveLeft = i == i2 && j2 == j-1;
-        // let moveRight = i == i2 && j2 == j+1;
-    
-        // let moveUp = j == j2 && i2 == i-1;
-        // let moveDown = j == j2 && i2 == i+1;
-    
-        // let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
-    
-        // if(isAdjacent){
             let presentImg = presentBlock.src;
             let presentorder = imgOrder.indexOf(presentBlock.id)
             
@@ -105,28 +83,18 @@ window.onload = function(){
             presentBlock.id = imgOrder[presentorder]
             sideBlock.id = imgOrder[sideorder]
 
+            // calculating the no. of moves
             turns+=1;
             console.log(turns)
+            // stroing the turns in localStorage
             localStorage.setItem('turns', turns);
     
             console.log(imgOrder,"img",orgOrder,"org");
-              
-        // }
     
     }
 
 
 }
-
-
-// // drag sound
-// let dragSound = new Audio("./sounds/drag sound.mp3");
-
-// let blockSound = document.getElementById('puzzle')
-// blockSound.onclick = () =>{
-//     dragSound.play();
-//     dragSound.volume = 2;
-// }
 
 
 

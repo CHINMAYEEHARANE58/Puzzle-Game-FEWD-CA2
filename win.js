@@ -4,9 +4,9 @@ let moves = localStorage.getItem('turns');
 
 document.querySelector(".score").textContent = `Moves: ${moves}`;
 
+// wining phrases
 
-
- function winPhrases() {
+function winPhrases() {
     const winTexts = [
         "Congratulations, you cracked it! Puzzle master!",
         "Victory is yours! Puzzle conquered!",
