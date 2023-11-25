@@ -1,19 +1,9 @@
 // // Retrieve turns from local storage
-// var score = localStorage.getItem('score') ? parseInt(localStorage.getItem('score')) : 0;
 
-// // Display the score on the page
-//  console.log(score);
-var storedScore = localStorage.getItem('score');
+let moves = localStorage.getItem('turns');
 
-if (storedScore) {
-    // Parse the score as an integer
-    var score = parseInt(storedScore);
+document.querySelector(".score").textContent = `Moves: ${moves}`;
 
-    // Display the score on the page
-    document.querySelector(".score").textContent = "Score: " + score;
-} else {
-    document.querySelector(".score").textContent = "No score found.";
-}
 
 
  function winPhrases() {

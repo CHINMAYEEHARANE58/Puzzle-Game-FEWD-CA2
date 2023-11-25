@@ -143,6 +143,10 @@ p{
     padding-left: 1.1rem;
 }
 
+h1{
+    color: #5698d0;
+    font-size: 25px;
+}
 .back{
     border: 0;
     position: absolute;
@@ -213,12 +217,12 @@ h2{
 
 
 /* responsive */
-@media screen and  (max-width: 264px)
+@media only screen and  (max-width: 900px)
 {   
     #gamepage{
         height: 100vh;
         width: 100vw;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     #bg-img{
@@ -226,17 +230,31 @@ h2{
         background-size: cover;
     }
 
+    #box{
+       /* border:2px solid white; */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       /* position: absolute; */
+      position: relative;
+      
+       height: 400px;
+       width: 290px;
+       bottom: 43rem;
+       left: 5rem;
+    }
     #logo{
-        height: 70px;
-        width: 14rem;
+        height: 78px;
+        width: 18rem;
         left: 7.5rem;
         bottom: 17rem;
         /* border: 1px solid rgb(181, 33, 33); */
     }
     
     #logo img{
-        height: 70px;
-        width: 14rem;
+        height: 78px;
+        width: 18rem;
     }
     
     #name{

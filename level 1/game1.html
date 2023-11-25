@@ -31,7 +31,7 @@
     <div id="timer"><h3>Time: 5:00</h3></div>
 
     <script src="../game.js"></script>
-    <!-- <script src="../app.js"></script> -->
+
     <script> 
     // starting timer
     const startingMin = 30;
@@ -40,7 +40,7 @@
     const timerEl = document.getElementById('timer');
     const intervalId = setInterval(startTimer, 1000);
 
-    setInterval(startTimer, 1000);
+    
     
     // function to start the timer
     function startTimer(){
@@ -51,23 +51,53 @@
         time--;
 
         // checking the winning and losing conditions
-        if(arraysEqual(imgOrder, orgOrder)){
-            clearInterval(intervalId);
-            location.href= "./win1.html";
-        }
-        else if (time < 0) {
-            clearInterval(intervalId);
-            location.href= "./lose1.html";
-        }
+        // if(score==1600){
+        //     // arraysEqual(imgOrder, orgOrder);
+
+            for (let i = 0; i < imgOrder.length; i++) {
+                console.log(imgOrder[i],"img",orgOrder[i],"org")
+                if (imgOrder[i] === orgOrder[i]) {
+                    location.href= "./win1.html";
+                }
+                else if(time < 0){
+                    location.href= "./lose1.html";
+                }
+            };
+        //     console.log("hello")
+        //     window.location.href = "./win1.html";
+        // }
+        // else if (time < 0 ) {
+        //     clearInterval(intervalId);
+        //     
+        // }
     }
 
-    function arraysEqual(imgOrder, orgOrder) {
-        if (imgOrder.length !== orgOrder.length) return false;
-        for (let i = 0; i < imgOrder.length; i++) {
-            if (imgOrder[i] !== orgOrder[i]) return false;
-        }
-        return true;
-    }
+    // console.log(score,"score")
+    // function arraysEqual(imgOrder, orgOrder) {
+    //     console.log(imgOrder,orgOrder)
+    //     if (imgOrder.length === orgOrder.length){
+
+    //         for (let i = 0; i < imgOrder.length; i++) {
+    //             console.log(imgOrder[i],"img",orgOrder[i],"org")
+    //             if (imgOrder[i] === orgOrder[i]){
+    //                 score+=100
+    //                 // console.log(score , "score hello")
+    //                 localStorage.setItem('score',score);
+                    
+    //             };
+    //         }
+    //         return score;
+    //     }
+    // }
+
+    // arraysEqual(imgOrder,orgOrder)
+    
+    
+    // if(imgOrder[i] === orgOrder[i]){
+    //     score+=100
+    // }
+    startTimer()
+
     </script>
 </body>
 </html>

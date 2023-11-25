@@ -20,7 +20,7 @@
         </a>
 
         <div id="instructions">
-            <h1>Heyy Chinmayee!!</h1>
+            <h1 id="welcome">Heyy Chinmayee!!</h1>
             <h3>Welcome to the picture puzzle game!</h3>
 
             <p>
@@ -41,20 +41,20 @@
     <script src="./app.js"></script>
     <script>
         // Retrieve user information from local storage
-        var storedInfo = localStorage.getItem('playerDetail');
+        const nickname = localStorage.getItem('nickname')
+        console.log(nickname)
+        document.getElementById('welcome').textContent = `Heyy ${nickname}!!`;
+        
 
-        if (storedInfo) {
-            // Parse the JSON string to an object
-            var playerDetail = JSON.parse(storedInfo);
 
-            // Display the user information on the page
-            document.querySelector('#instructions h1').innerHTML =
-                '<p>Heyy ' + playerDetail.name + '</p>' +
-                '<p>(' + playerDetail.nickname + ')</p>';
-        } else {
-            document.querySelector('userInfoForm').innerHTML = '<p>No user information found.</p>';
-        }
-        console.log('playerDetail')
+        // const clickStratSound = new Audio('./drag sound.wav');
+        // let startButton = document.getElementById('start-button');
+
+        // startButton.addEventListener("click", function() {
+        // // Play the audio when the button is clicked
+        // clickStratSound.play();
+        // clickStratSound.volume = 0.3
+// });
 
     </script>
 </body>

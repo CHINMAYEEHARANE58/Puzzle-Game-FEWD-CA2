@@ -13,52 +13,41 @@
     <div id="gamepage">
         <img id="bg-img" src="./Images/Screen 19 (1).png">
 
+        <div id="box">
         <div id="logo">
             <img src="Images/Pink and Blue Minimalist Toy Shop - Logo.png">
         </div>
 
         <form id="userInfoForm">
             <!-- Name of user -->
-            <input id="name" type="text" required placeholder="Enter your name...">
-
+            <input id="name" type="text" required value="" placeholder="Enter your name...">
+        
             <!-- Nickname of user -->
-            <input id="nickname" type="text" required placeholder="Enter your nickname...">
+            <input id="nickname" type="text" required value="" placeholder="Enter your nickname...">
+        
+            <!-- Use a button with an "onclick" event instead of "type='submit'" -->
+            <button id="play-button" onclick="navigateToInstructions()">PLAY</button>
         </form>
-
-        <a href="./instructions.html">
-            <button id="play-button">PLAY</button>
-            <audio id="myAudio">
-                <source src="./click sound.wav" type="audio/wav">             
-            </audio>
-        </a>
-
-    </div>
-
-    <script src="./app.js"></script>
-    <script>
-        // Function to save user information to local storage
-        document.getElementById('userInfoForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevents the default form submission
-            playerInfo();
-        });
-
-        function playerInfo() {
-            var name = document.getElementById('name').value;
-            var nickname = document.getElementById('nickname').value;
-
-            // Create an object to store user information
-            var playerDetail = {
-                name: name,
-                nickname: nickname
-            };
-            console.log('playerDetail')
-            // Convert the object to a JSON string and store in local storage
-            localStorage.setItem('playerDetail', JSON.stringify(playerDetail));
-
-            // Redirect to the next page
-            window.location.href = './instructions.html';
-        }
-    </script>
+        
+        <script src="./app.js"></script>
+        <script>
+            // Function to navigate to the instructions page
+            function navigateToInstructions() {
+                // Get the value of the nickname input field when the button is clicked
+                const name = document.getElementById("nickname").value;
+        
+                // Check if the name is not empty before navigating
+                if (name.trim() !== "") {
+                    // Save the nickname to localStorage if needed
+                    localStorage.setItem("nickname", name);
+        
+                    // Navigate to the instructions page
+                    location.href = "./instructions.html";
+                }
+            }
+        </script>
+        
+    
 <!-- <img src="./click sound.wav" alt=""> -->
 </body>
 
