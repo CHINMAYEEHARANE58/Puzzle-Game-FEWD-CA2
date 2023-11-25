@@ -213,9 +213,7 @@ h2{
 {   
     #gamepage{
         height: 100vh;
-        width: 100vw;
-        border: 1px solid red;
-        
+        width: 100vw;        
         
     }
 
@@ -246,7 +244,7 @@ h2{
         height: 10vw;
         left: 27vw;
         bottom: 110vw;
-        font-size: 20px;
+        font-size: 17px;
         border-radius: 12px;
     }
     
@@ -255,7 +253,7 @@ h2{
         height: 9vw;
         left: 29.5vw;
         bottom: 90vw;
-        font-size: 16px;
+        font-size: 15px;
         border-radius: 12px;
     }
     
@@ -271,43 +269,46 @@ h2{
 /* Instructions */
 
 #instructions{
-    left: 1rem;
-    bottom: 12rem;
-    height: 14rem;
-    width: 14.5rem;
+    left: 10vw;
+    bottom: 90vw;
+    height: 78vw;
+    width: 80vw;
     border-radius: 14px;
-    padding: 10px;
+    padding: 11px;
 }
 
 #start-button{
-    height: 2.8rem;
-    width: 9rem;
-    left: 4rem;
-    bottom: 6rem;
-    font-size: 25px;
+    height: 15vw;
+    width: 45vw;
+    left: 27vw;
+    bottom: 60vw;
+    font-size: 37px;
+}
+
+h1{
+    font-size: 21px;
 }
 
 h3{
-    font-size: 11px;
-    font-weight: 9rem;
-    padding: 0.7rem 0px;
+    font-size: 17px;
+    padding: 3vw 0px;
 }
 
 p{
-    font-size: 9px;
-    line-height: 1.1rem;
-    padding-left: 0.3rem;
+    font-size: 14px;
+    line-height: 5vw;
+    padding-left: 0.3vw;
 }
 
 .back{
-    height: 30px;
-    width: 30px;
-    left: 0.7rem;
-    bottom: 29.1rem;
+    height: 3rem;
+    width: 3rem;
+    left: 3vw;
+    bottom: 200vw;
 }
 
 .back img{
-    margin-top: 0.3rem;
+    margin-top: 1vw;
     width: 20px;
     height: 20px;
 }
@@ -315,40 +316,42 @@ p{
 /* result */
 
 #playAgain{
-    height: 2.8rem;
-    width: 10rem;
-    left: 3.5rem;
-    bottom: 6rem;
-    font-size: 25px;
+    height: 15vw;
+    width: 45vw;
+    left: 22vw;
+    bottom: 60vw;
+    font-size: 30px;
 }
 
 #pictures-container{
-    width: 14.5rem;
-    height: 15rem;
-    left: 1rem;
-    bottom: 10rem;
+    left: 7vw;
+    bottom: 90vw;
+    height: 78vw;
+    width: 73vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 1rem 0rem;
+    padding: 1vw 0vw;
 }
 
 .pictures{
-    width: 80px;
-    height: 60px;
+    width: 30vw;
+    height: 22vw;
     font-size: 40px;
     border-radius: 6px;
 }
 
 .pictures img{
-    width: 80px;
-    height: 60px;
+    width: 30vw;
+    height: 22vw;
 }
 
 h2{
-    font-size: 18px;
-    left: 0.3rem;
-    bottom: 26rem;
-    padding: 0rem 1rem;
+    font-size: 23px;
+    left: 1vw;
+    right: 14vw;
+    bottom: 178vw;
 }
+
+
 }
