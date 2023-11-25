@@ -59,7 +59,7 @@ function dragLeave(){
 }
 
 function dragDrop(){
-    sideBlock = th6is; //this refers to the img block being dropped on
+    sideBlock = this; //this refers to the img block being dropped on
 }
 
 function dragEnd(){
@@ -97,7 +97,7 @@ function dragEnd(){
         console.log(turns)
         localStorage.setItem('turns', turns);
 
-        console.log(imgOrder,"img",orgOrder,"org")
+        console.log(imgOrder,"img",orgOrder,"org");
 
 
         //calculating time diffrence in minutes
