@@ -214,25 +214,32 @@ h2{
     #gamepage{
         height: 100vh;
         width: 100vw;
-        /* border: 1px solid red; */
+        border: 1px solid red;
+        
+        
     }
 
     #bg-img{
-        background-image: url('./Images/mobile\ screen\ -\ 4.png');
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        /* height: 100vh;
+        width: 100vw; */
     }
 
  
     #logo{
-        height: 9rem;
-        width: 22rem;
-        left: 13rem;
-        bottom: 30rem;
+        height: 24vw;
+        width: 70vw;
+        left: 14vw;
+        bottom: 130vw;
     }
     
     #logo img{
-        height: 9rem;
-        width: 22rem;
+        height: 24vw;
+        width: 70vw;
     }
     #name{
         width: 15rem;
