@@ -167,46 +167,44 @@ h1{
 #playAgain{
     border: 0px;
     position: absolute;
-    height: 4rem;
-    width: 20rem;
-    left: 50rem;
-    bottom: 4rem;
+    height: 4vw;
+    width: 17vw;
+    left: 41vw;
+    bottom: 2.5vw;
     border-radius: 50px;
     background-color: rgba(241, 72, 122, 1);
-    font-size: 45px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 #pictures-container{
     position: absolute;
-    width: 80rem;
-    height: 40rem;
-    left: 20rem;
-    bottom: 9rem;
+    width: 55vw;
+    height: 26vw;
+    left: 22vw;
+    bottom: 9vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 2rem;
-
+    padding: 1vw;
 }
 
 .pictures{
-    width: 20rem;
-    height: 14rem;
-    font-size: 40px;
+    width: 16vw;
+    height: 11vw;
     border-radius: 16px;
 }
 
 .pictures img{
-    width: 20rem;
-    height: 14rem;
+    width: 16vw;
+    height: 11vw;
 }
 
 h2{
     position: absolute;
-    font-size: 40px;
-    left: 34rem;
-    bottom: 50rem;
+    font-size: 30px;
+    left: 24vw;
+    bottom: 38vw;
 }
 
 
