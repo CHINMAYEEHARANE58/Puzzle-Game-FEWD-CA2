@@ -37,15 +37,12 @@
             timerEl.innerHTML = `Time - ${minutes}: ${seconds}`;
             time--;
 
-            for (let i = 0; i < imgOrder.length; i++) {
-                    console.log(imgOrder[i],"img",orgOrder[i],"org")
-                    if (imgOrder[i] === orgOrder[i]) {
-                        location.href= "../result.html";
-                    }
-                    else if(time < 0){
-                        location.href= "./lose5.html";
-                    }
-                };
+            if(JSON.stringify(imgOrder) === JSON.stringify(orgOrder)){
+                location.href= "../result.html";
+            }
+            else if (time < 0) {
+                location.href= "./lose5.html";
+            }
         }
     </script>
 </body>
