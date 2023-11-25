@@ -230,57 +230,42 @@ h2{
         background-size: cover;
     }
 
-    #box{
-       /* border:2px solid white; */
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       flex-direction: column;
-       /* position: absolute; */
-      position: relative;
-      
-       height: 400px;
-       width: 290px;
-       bottom: 43rem;
-       left: 5rem;
-    }
+ 
     #logo{
-        height: 78px;
-        width: 18rem;
-        left: 7.5rem;
-        bottom: 17rem;
-        /* border: 1px solid rgb(181, 33, 33); */
+        height: 9rem;
+        width: 22rem;
+        left: 13rem;
+        bottom: 30rem;
     }
     
     #logo img{
-        height: 78px;
-        width: 18rem;
+        height: 9rem;
+        width: 22rem;
     }
-    
     #name{
-        width: 10.5rem;
-        height: 2.1rem;
-        left: 3.2rem;
-        bottom: 16rem;
-        font-size: 16px;
+        width: 15rem;
+        height: 3rem;
+        left: 6rem;
+        bottom: 29rem;
+        font-size: 20px;
         border-radius: 12px;
     }
     
     #nickname{
-        width: 9.5rem;
-        height: 1.9rem;
-        left: 3.7rem;
-        bottom: 12rem;
-        font-size: 13px;
+        width: 13rem;
+        height: 2.7rem;
+        left: 7rem;
+        bottom: 24rem;
+        font-size: 16px;
         border-radius: 12px;
     }
     
     #play-button{
-        height: 2.8rem;
-        width: 9rem;
-        left: 4rem;
-        bottom: 7rem;
-        font-size: 25px;
+        height: 4rem;
+        width: 12rem;
+        left: 7.5rem;
+        bottom: 16rem;
+        font-size: 34px;
     }
     
     

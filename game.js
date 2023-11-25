@@ -9,8 +9,8 @@ var turns = 0;
 
 
 // orginal order of picture and incomplete order of picture
-var orgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];  // orginal order 
-var imgOrder = ["5", "8", "15", "9", "1", "16", "14", "6", "12", "11", "2", "3", "4", "10", "7", "13"];  //I didn't randomize as it can create unsolvable puzzles
+let orgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];  // orginal order 
+let imgOrder = ["5", "8", "15", "9", "1", "16", "14", "6", "12", "11", "2", "3", "4", "10", "7", "13"];  //I didn't randomize as it can create unsolvable puzzles
 
 let startTime;
 window.onload = function(){
@@ -40,92 +40,93 @@ window.onload = function(){
             document.getElementById("puzzle").append(block);
         }
     }
+
+    function dragStart(){
+        presentBlock = this; //this refers to the img block being dragged
+    }
+    
+    function dragOver(e){
+        e.preventDefault();
+    }
+    
+    function dragEnter(e){
+        e.preventDefault();
+    }
+    
+    function dragLeave(){
+    
+    }
+    
+    function dragDrop(){
+        sideBlock = this; //this refers to the img block being dropped on
+    }
+    
+    function dragEnd(){
+    
+        // To make sure the block will only get dragged on block 16.png
+        // if(!sideBlock.src.includes("16.png")){
+        //     return;
+        // }
+    
+        // To make sure the block will only get dragged on the 16.png block if it is adjusent
+        // let presentCoords = presentBlock.id.split("-"); //to convert "0-0" to ["0", "0"]
+        // let i = parseInt(presentCoords[0]);
+        // let j = parseInt(presentCoords[1]);
+    
+        // let sideCoords = sideBlock.id.split("-");
+        // let i2 = parseInt(sideCoords[0]);
+        // let j2 = parseInt(sideCoords[1]);
+    
+        // let moveLeft = i == i2 && j2 == j-1;
+        // let moveRight = i == i2 && j2 == j+1;
+    
+        // let moveUp = j == j2 && i2 == i-1;
+        // let moveDown = j == j2 && i2 == i+1;
+    
+        // let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
+    
+        // if(isAdjacent){
+            let presentImg = presentBlock.src;
+            let sideImg = sideBlock.src;
+    
+            presentBlock.src = sideImg;
+            sideBlock.src = presentImg;
+    
+            turns+=1;
+            console.log(turns)
+            localStorage.setItem('turns', turns);
+    
+            console.log(imgOrder,"img",orgOrder,"org");
+    
+    
+            //calculating time diffrence in minutes
+            // let endTime = new Date();
+            // let timeDiff = (endTime -startTime) /60000;
+    
+            // // score condition
+            // if (timeDiff <= 5) {
+            //     score += 100;
+            // } else if (timeDiff <= 10) {
+            //     score += 80;
+            // } else if (timeDiff <= 15) {
+            //     score += 60;
+            // } else if (timeDiff <= 20) {
+            //     score += 40;
+            // } else if (timeDiff <= 25) {
+            //     score += 20;
+            
+    
+            // console.log("Score:", score);
+    
+            // 
+            
+    
+            
+        // }
+    
+    }
 }
 
-function dragStart(){
-    presentBlock = this; //this refers to the img block being dragged
-}
-
-function dragOver(e){
-    e.preventDefault();
-}
-
-function dragEnter(e){
-    e.preventDefault();
-}
-
-function dragLeave(){
-
-}
-
-function dragDrop(){
-    sideBlock = this; //this refers to the img block being dropped on
-}
-
-function dragEnd(){
-
-    // To make sure the block will only get dragged on block 16.png
-    // if(!sideBlock.src.includes("16.png")){
-    //     return;
-    // }
-
-    // To make sure the block will only get dragged on the 16.png block if it is adjusent
-    // let presentCoords = presentBlock.id.split("-"); //to convert "0-0" to ["0", "0"]
-    // let i = parseInt(presentCoords[0]);
-    // let j = parseInt(presentCoords[1]);
-
-    // let sideCoords = sideBlock.id.split("-");
-    // let i2 = parseInt(sideCoords[0]);
-    // let j2 = parseInt(sideCoords[1]);
-
-    // let moveLeft = i == i2 && j2 == j-1;
-    // let moveRight = i == i2 && j2 == j+1;
-
-    // let moveUp = j == j2 && i2 == i-1;
-    // let moveDown = j == j2 && i2 == i+1;
-
-    // let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
-
-    // if(isAdjacent){
-        let presentImg = presentBlock.src;
-        let sideImg = sideBlock.src;
-
-        presentBlock.src = sideImg;
-        sideBlock.src = presentImg;
-
-        turns+=1;
-        console.log(turns)
-        localStorage.setItem('turns', turns);
-
-        console.log(imgOrder,"img",orgOrder,"org");
-
-
-        //calculating time diffrence in minutes
-        // let endTime = new Date();
-        // let timeDiff = (endTime -startTime) /60000;
-
-        // // score condition
-        // if (timeDiff <= 5) {
-        //     score += 100;
-        // } else if (timeDiff <= 10) {
-        //     score += 80;
-        // } else if (timeDiff <= 15) {
-        //     score += 60;
-        // } else if (timeDiff <= 20) {
-        //     score += 40;
-        // } else if (timeDiff <= 25) {
-        //     score += 20;
-        
-
-        // console.log("Score:", score);
-
-        // 
-        
-
-        
-    // }
-
-}
 
 // // drag sound
 // let dragSound = new Audio("./sounds/drag sound.mp3");
