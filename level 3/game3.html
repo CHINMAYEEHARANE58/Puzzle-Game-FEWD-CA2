@@ -16,8 +16,15 @@
     <img id="refrenceImg" src="./img 3.png">
 
     <!-- level 3 game page -->
+    <!-- background sound -->
+    <audio controls autoplay>
+        <source src="../level bg music.mp3" type="audio/mp3">
+    </audio>
+
     <h2>Level 3</h2> 
-    <div id="puzzle"></div>
+    <div onclick="playClickSound()" id="puzzle"></div>
+    <audio id="clickSound" src="../drag sound.wav"></audio>
+    
     <div id="timer"><h3>Time: 20:00</h3></div>
     
     <script src="../game.js"></script>

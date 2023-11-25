@@ -4,17 +4,17 @@ sound.play();
 sound.loop = true;
 sound.volume = 0.2;
 
-// click sound
+// click sound forplay button
 
 const clickSound = new Audio('./click sound.wav');
-let button = document.getElementById('play-button');
+let button = document.getElementsById('play-button');
 
 button.addEventListener("click", function() {
     // Play the audio when the button is clicked
     clickSound.play();
     clickSound.volume = 0.3
-    // location.href = './instructions.html'
 });
+
 
 document.getElementById('userInfoForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevents the default form submission

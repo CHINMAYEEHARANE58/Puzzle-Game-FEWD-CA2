@@ -90,13 +90,21 @@ window.onload = function(){
             localStorage.setItem('turns', turns);
     
             console.log(imgOrder,"img",orgOrder,"org");
+
+            playClickSound();
     
     }
 
 
 }
 
+// darg sound
+function playClickSound() {
+    var clickSound = document.getElementById("clickSound");
 
+    // Play the sound
+    clickSound.play();
+}
 
 // randomized lose phrases
 function losePhrases() {
